@@ -1,0 +1,39 @@
+{
+  "name": "moonboots-static",
+  "description": "A static build plugin for moonboots.",
+  "version": "0.0.1",
+  "author": {
+    "url": "http://lukekarrys.com",
+    "email": "luke@lukekarrys.com",
+    "name": "Luke Karrys"
+  },
+  "bugs": {
+    "url": "https://github.com/lukekarrys/moonboots-static/issues"
+  },
+  "dependencies": {
+    "async": "^0.7.0",
+    "execSync": "^1.0.1-pre",
+    "mkdirp": "^0.3.5",
+    "moonboots": "^2.0.4",
+    "rmrf": "^1.0.2"
+  },
+  "devDependencies": {
+    "jshint": "^2.5.0",
+    "lab": "^3.0.1",
+    "precommit-hook": "^0.4.1"
+  },
+  "homepage": "https://github.com/lukekarrys/moonboots-static",
+  "keywords": [
+    "moonboots",
+    "static"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:lukekarrys/moonboots-static.git"
+  },
+  "scripts": {
+    "test": "./node_modules/lab/bin/lab -t 100"
+  }
+}
