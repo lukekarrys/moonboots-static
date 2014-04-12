@@ -1,11 +1,14 @@
 {
   "name": "moonboots-static",
   "description": "A static build plugin for moonboots.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": {
     "url": "http://lukekarrys.com",
     "email": "luke@lukekarrys.com",
     "name": "Luke Karrys"
+  },
+  "bin": {
+    "moonboots": "index.js"
   },
   "bugs": {
     "url": "https://github.com/lukekarrys/moonboots-static/issues"
@@ -34,6 +37,9 @@
     "url": "git@github.com:lukekarrys/moonboots-static.git"
   },
   "scripts": {
-    "test": "./node_modules/lab/bin/lab -t 100"
+    "test": "./node_modules/lab/bin/lab -t 100",
+    "start": "node sample/build",
+    "start-complex": "node sample/build --complex",
+    "cli": "./index.js sample/config.js"
   }
 }
