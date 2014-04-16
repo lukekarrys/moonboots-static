@@ -16,6 +16,7 @@ Lab.experiment('Init', function () {
                     mainSample + '/stylesheets/style.css'
                 ],
                 resourcePrefix: '/assets/',
+                developmentMode: true
             },
             public: mainSample + '/public',
             directory: mainSample + '/_build',
