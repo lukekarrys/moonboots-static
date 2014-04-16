@@ -21,9 +21,11 @@
     "rmrf": "^1.0.2"
   },
   "devDependencies": {
+    "execSync": "^1.0.1-pre",
     "jshint": "^2.5.0",
     "lab": "^3.0.1",
-    "precommit-hook": "^0.4.1"
+    "precommit-hook": "^0.4.1",
+    "underscore": "^1.6.0"
   },
   "homepage": "https://github.com/lukekarrys/moonboots-static",
   "keywords": [
@@ -37,9 +39,8 @@
     "url": "git@github.com:lukekarrys/moonboots-static.git"
   },
   "scripts": {
-    "test": "./node_modules/lab/bin/lab",
+    "test": "./node_modules/lab/bin/lab -t 94",
     "start": "node sample/build",
-    "start-complex": "node sample/build --complex",
     "cli": "./index.js sample/config.js"
   }
 }

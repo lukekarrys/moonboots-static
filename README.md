@@ -63,7 +63,7 @@ moonboots config.js
 
 ## Test
 
-Run `npm test`
+Run `npm test`.
 
 
 ## Sample
