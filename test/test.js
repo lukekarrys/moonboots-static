@@ -1,5 +1,5 @@
 var Lab = require('lab');
-var MoonbootsStatic = require('..');
+var MoonbootsStatic = require('../lib/moonboots-static');
 var mainSample = __dirname + '/../sample';
 var config = require(mainSample + '/config.js')();
 

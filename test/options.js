@@ -1,5 +1,5 @@
 var Lab = require('lab');
-var MoonbootsStatic = require('..');
+var MoonbootsStatic = require('../lib/moonboots-static');
 var path = require('path');
 var mainSample = path.resolve(__dirname + '/../sample');
 var buildPath = path.resolve(mainSample + '/_build');

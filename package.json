@@ -39,7 +39,7 @@
     "url": "git@github.com:lukekarrys/moonboots-static.git"
   },
   "scripts": {
-    "test": "./node_modules/lab/bin/lab -t 94",
+    "test": "./node_modules/lab/bin/lab -t 100",
     "start": "node sample/build",
     "cli": "./index.js sample/config.js"
   }
