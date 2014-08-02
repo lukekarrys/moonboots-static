@@ -21,10 +21,9 @@
     "rmrf": "^1.0.2"
   },
   "devDependencies": {
-    "execSync": "^1.0.1-pre",
-    "jshint": "^2.5.0",
+    "jshint": "^2.5.2",
     "lab": "^3.0.1",
-    "precommit-hook": "^0.4.1",
+    "precommit-hook": "^1.0.5",
     "underscore": "^1.6.0"
   },
   "homepage": "https://github.com/lukekarrys/moonboots-static",

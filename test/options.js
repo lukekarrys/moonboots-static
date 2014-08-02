@@ -62,6 +62,23 @@ Lab.experiment('Options', function () {
         });
     });
 
+    Lab.test('Doesnt write css', function (done) {
+        var moonboots = new MoonbootsStatic(config({
+            htmlSource: null,
+            moonboots: { stylesheets: [] }
+        }));
+
+        moonboots.on('ready', function () {
+            Lab.expect(fs.existsSync(buildPath + '/app.nonCached.js')).to.equal(true);
+            Lab.expect(fs.existsSync(buildPath + '/styles.nonCached.css')).to.equal(false);
+            Lab.expect(fs.existsSync(buildPath + '/index.html')).to.equal(true);
+            var index = fs.readFileSync(buildPath + '/index.html', 'utf8');
+            Lab.expect(index.indexOf('<!DOCTYPE html>')).to.equal(0);
+            Lab.expect(index.indexOf('styles.nonCached.css')).to.equal(-1);
+            done();
+        });
+    });
+
     Lab.test('Calls callback', function (done) {
         var moonboots = new MoonbootsStatic(config({
             cb: function (err) {
