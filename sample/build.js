@@ -1,6 +1,8 @@
-var MoonbootsStatic = require('..');
-var cofig = require('./config')();
-var moonboots = new MoonbootsStatic(cofig);
+var MoonbootsStatic = require('../index');
+var cofig = require('./config')({
+    cb: function (err) {
+        console.log(err || 'Done!');
+    }
+});
 
-
-moonboots.on('log', console.log);
+new MoonbootsStatic(cofig);

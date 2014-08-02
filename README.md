@@ -41,11 +41,14 @@ moonboots.on('ready', function (err) {
 
 ## CLI Usage
 
-The easiest way to use it from the command line is to just provide a path to a config file as the first argument:
+To use it from the command line, provide a path to a config file as the first argument. The config file can be a `.json` file or a `.js` file that exports either an object or function that returns an object.
 
 ```
 moonboots config.js
 ```
+
+`--quiet` Turn off any logging
+
 
 
 ## API
@@ -55,10 +58,6 @@ moonboots config.js
 - `htmlSource`: A function with the signature `(context)` that should return the HTML you wish to write to your HTML file. It will have `resourcePrefix`, `cssFileName`, and `jsFileName` set on `context`. By default this will just use the [default Moonboots HTML source](https://github.com/HenrikJoreteg/moonboots/blob/master/index.js#L176-L180).
 - `cb`: A callback that will be run after the build is complete. If there is an `err` it will be the first argumentt. If this `cb` is not provided, `moonboots-static` will emit a `ready` event instead.
 - `moonboots`: This is an object that is passed directly to [Moonboots](https://github.com/HenrikJoreteg/moonboots). See the [documentation](https://github.com/HenrikJoreteg/moonboots#options) for what options are available.
-
-## TODO
-
-- Provide CLI options for specific config options
 
 
 ## Test
