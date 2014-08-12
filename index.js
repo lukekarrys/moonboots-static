@@ -10,9 +10,9 @@ if (module.parent) {
 
 // Otherwise run it from the command line
 var path = require('path');
-var configPath = path.join(__dirname, process.argv[2]);
+var configPath = path.join(process.cwd(), process.argv[2]);
 var config = require(configPath);
-var _ = require('underscore');
+var last = function (arr) { return arr[arr.length - 1]; };
 require('colors');
 
 function timingString(ms) {
@@ -35,7 +35,7 @@ new MoonbootsStatic(config).on('log', function () {
     var timing = arguments[2];
     var message = arguments[1];
 
-    if (_.last(message.split(' ')) === 'finish') {
+    if (last(message.split(' ')) === 'finish') {
         console.log(timingString(timing - lastTime) + message.replace('finish', ''));
         lastTime = timing;
     }
