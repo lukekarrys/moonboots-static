@@ -27,7 +27,9 @@ var moonboots = new Moonboots({
     // will be copied to the target directory 
     public: __dirname + '/public',
     // Directory to build files into
-    directory: __dirname + '/_build'
+    directory: __dirname + '/_build',
+    // Log build items
+    verbose: true
 });
 
 moonboots.on('ready', function (err) {
@@ -47,12 +49,13 @@ To use it from the command line, provide a path to a config file as the first ar
 moonboots config.js
 ```
 
-`--quiet` Turn off any logging
+`--quiet` Turn off any logging. It is on by default.
 
 
 
 ## API
 
+- `verbose`: Whether you want to log everything. Defaults to `false`. Even if you don't turn this on you can still listen to the emitted `log` events with `.on('log')`.
 - `directory`: The directory where you want to write your files.
 - `public`: A directory where the contents will be `cp -r`'d into the `directory` after everything else is built.
 - `htmlSource`: A function with the signature `(context)` that should return the HTML you wish to write to your HTML file. It will have `resourcePrefix`, `cssFileName`, and `jsFileName` set on `context`. By default this will just use the [default Moonboots HTML source](https://github.com/HenrikJoreteg/moonboots/blob/master/index.js#L176-L180).

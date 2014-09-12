@@ -12,35 +12,13 @@ if (module.parent) {
 var path = require('path');
 var configPath = path.join(process.cwd(), process.argv[2]);
 var config = require(configPath);
-var last = function (arr) { return arr[arr.length - 1]; };
-require('colors');
-
-function timingString(ms) {
-    ms = ms + '';
-    var ws = new Array(4 - ms.length).join(' ');
-    return (ws + ms + 'ms').red + ' | ';
-}
 
 if (typeof config === 'function') {
     config = config();
 }
 
 // Turn on timing logs in moonboots
-config.moonboots.timingMode = process.argv.join(' ').indexOf('--quiet') === -1;
+config.verbose = process.argv.join(' ').indexOf('--quiet') === -1;
 
-var initialTime = Date.now();
-var lastTime = initialTime;
-
-new MoonbootsStatic(config).on('log', function () {
-    var timing = arguments[2];
-    var message = arguments[1];
-
-    if (last(message.split(' ')) === 'finish') {
-        console.log(timingString(timing - lastTime) + message.replace('finish', ''));
-        lastTime = timing;
-    }
-    else if (message === 'built') {
-        console.log('-----------------------');
-        console.log(timingString(timing - initialTime) + 'Complete'.blue);
-    }
-});
+// Start it
+new MoonbootsStatic(config);

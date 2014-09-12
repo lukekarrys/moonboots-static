@@ -87,4 +87,14 @@ Lab.experiment('Options', function () {
             }
         }));
     });
+
+    Lab.test('Can be verbose', function (done) {
+        var moonboots = new MoonbootsStatic(config({
+            verbose: true
+        }));
+
+        moonboots.on('ready', function () {
+            done();
+        });
+    });
 });
