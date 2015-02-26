@@ -82,7 +82,7 @@ Lab.experiment('Options', function () {
     Lab.test('Calls callback', function (done) {
         var moonboots = new MoonbootsStatic(config({
             cb: function (err) {
-                Lab.expect(err).to.equal(undefined);
+                Lab.expect(!!err).to.equal(false);
                 done();
             }
         }));
