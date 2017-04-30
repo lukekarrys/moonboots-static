@@ -1,6 +1,8 @@
 moonboots-static
 ================
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/lukekarrys/moonboots-static.svg)](https://greenkeeper.io/)
+
 [![NPM](https://nodei.co/npm/moonboots-static.png)](https://nodei.co/npm/moonboots-static/)
 [![Build Status](https://travis-ci.org/lukekarrys/moonboots-static.png?branch=master)](https://travis-ci.org/lukekarrys/moonboots-static)
 
