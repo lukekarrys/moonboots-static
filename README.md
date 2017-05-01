@@ -1,14 +1,14 @@
 moonboots-static
 ================
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/lukekarrys/moonboots-static.svg)](https://greenkeeper.io/)
+**A static build plugin for moonboots.**
 
 [![NPM](https://nodei.co/npm/moonboots-static.png)](https://nodei.co/npm/moonboots-static/)
 [![Build Status](https://travis-ci.org/lukekarrys/moonboots-static.png?branch=master)](https://travis-ci.org/lukekarrys/moonboots-static)
-
-**A static build plugin for moonboots.**
+[![Greenkeeper badge](https://badges.greenkeeper.io/lukekarrys/moonboots-static.svg)](https://greenkeeper.io/)
 
 Just like [Moonboots](https://github.com/HenrikJoreteg/moonboots) but it will put all the built files into a directory ready to be served statically.
+
 
 ## Install
 
