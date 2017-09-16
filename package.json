@@ -22,7 +22,7 @@
     "rimraf": "^2.5.4"
   },
   "devDependencies": {
-    "code": "^4.0.0",
+    "code": "^5.0.0",
     "git-validate": "^2.2.2",
     "lab": "^14.0.0",
     "standard": "^10.0.2",
