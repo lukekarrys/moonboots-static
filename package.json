@@ -28,6 +28,12 @@
     "standard": "^10.0.2",
     "underscore": "^1.8.3"
   },
+  "greenkeeper": {
+    "ignore": [
+      "code",
+      "lab"
+    ]
+  },
   "homepage": "https://github.com/lukekarrys/moonboots-static",
   "keywords": [
     "moonboots",
