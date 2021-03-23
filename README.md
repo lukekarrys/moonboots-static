@@ -1,11 +1,14 @@
 moonboots-static
 ================
 
+**A static build plugin for moonboots.**
+
 [![NPM](https://nodei.co/npm/moonboots-static.png)](https://nodei.co/npm/moonboots-static/)
 
 **A static build plugin for moonboots.**
 
 Just like [Moonboots](https://github.com/HenrikJoreteg/moonboots) but it will put all the built files into a directory ready to be served statically.
+
 
 ## Install
 
